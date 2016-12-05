@@ -1,0 +1,32 @@
+#container {
+	width: 50%;
+	border-radius: 5px;
+	background-color: #dddddd;
+	padding: 18px;
+	margin: 10% auto;
+	text-align: center;
+}
+
+#letters a{
+	color: red;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: darkgray;
+	cursor: pointer;
+	background-image: url("../images/buttonbkgrd.jpg");
+
+}
+
+button {
+	width:50px;
+	height:50px;
+	background-image: url("../images/buttonbkgrd.jpg");
+}
+#letters a:hover{
+	color: green;
+}
+
+#letters a .d{
+	color: yellow;
+	text-decoration: underline;
+}
