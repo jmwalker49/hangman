@@ -7,6 +7,7 @@ Main.NumInWordBank = Words.List.length;
 
 Main.Word = "test";
 Main.WordU ="";
+guessArray = [];
 
 // function start here
 
@@ -38,6 +39,13 @@ Main.setUnderline = function(){
 
 	Main.updateLetter = function(letter){
 		Main.Changes = 0;
+		var guess = String(letter).toLowerCase();
+		// console.log(guess);
+		guessArray.push(guess);
+		// console.log(guessArray);
+		guessArrayW = guessArray.join(" ");
+		document.getElementById("guessed").innerHTML = guessArrayW;
+		
 		for(var i = 0; i < Main.Word.length; i++){
 			Main.WordArray[i] = Main.Word.charAt(i);
 			if(Main.Word.charAt(i) == letter){

@@ -2,6 +2,7 @@
 	width: 50%;
 	border-radius: 5px;
 	background-color: #dddddd;
+	/*background-image: url("../images/buttonbkgrd.jpg");*/
 	padding: 18px;
 	margin: 10% auto;
 	text-align: center;
@@ -13,14 +14,13 @@
 	padding: 5px;
 	background-color: darkgray;
 	cursor: pointer;
-	background-image: url("../images/buttonbkgrd.jpg");
-
+	
 }
 
-button {
-	width:50px;
-	height:50px;
-	background-image: url("../images/buttonbkgrd.jpg");
+#header{
+	font-weight: bold;
+}
+
 }
 #letters a:hover{
 	color: green;
@@ -29,4 +29,8 @@ button {
 #letters a .d{
 	color: yellow;
 	text-decoration: underline;
+}
+
+.btn-xs {
+	width: 20px;
 }
