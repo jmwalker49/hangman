@@ -4,106 +4,77 @@
     <meta charset="UTF-8">
     <title>The Pyschic Game</title>
 
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 
   <!-- Added a link to Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
   </head>
   <body>
+      <audio id="myAudio">
+      <source src="assets/sounds/World.mp3" type="audio/mpeg">
+     </audio>
 
-    <!-- When we start playing the game, our HTML will be placed into this div. -->
-    <div id="game">
-      <p><h1>Baseball</h1></p>
-      <p>Hangman</p>
-      <p>Press any key to get started</p>
-      <p>Wins: </p>
-      <p>Current Word: </p>
-      <p id="wordDiv"> Blank </p>
-      <p>Number of Guesses Remaining: </p>
-      <p>Letters Already Used: </p>
+  <div id="container">
+
+    <div id="header">
+      <p>You have <span id="lives">4</span> lives left.
+      <br>There are <span id="numLetters">0</span> letters in this word.
+      </p>
+      <h1 id="WORD">______</h1>
 
     </div>
 
+    <div id="letters">
+       <p>
+    <a id="a" class="btn btn-xs btn-primary">A</a>
+    <a id="b" class="btn btn-xs btn-primary">B</a>
+    <a id="c" class="btn btn-xs btn-primary">C</a>
+    <a id="d" class="btn btn-xs btn-primary">D</a>
+    <a id="e" class="btn btn-xs btn-primary">E</a>
+    <a id="f" class="btn btn-xs btn-primary">F</a>
+    <a id="g" class="btn btn-xs btn-primary">G</a>
+    <a id="h" class="btn btn-xs btn-primary">H</a>
+    <a id="i" class="btn btn-xs btn-primary">I</a>
+    <a id="j" class="btn btn-xs btn-primary">J</a>
+    <a id="k" class="btn btn-xs btn-primary">K</a>
+    <a id="l" class="btn btn-xs btn-primary">L</a>
+    <a id="m" class="btn btn-xs btn-primary">M</a>
+    <a id="n" class="btn btn-xs btn-primary">N</a>
+    <a id="o" class="btn btn-xs btn-primary">O</a>
+    <a id="p" class="btn btn-xs btn-primary">P</a>
+    <a id="q" class="btn btn-xs btn-primary">Q</a>
+    <a id="r" class="btn btn-xs btn-primary">R</a>
+    <a id="s" class="btn btn-xs btn-primary">S</a>
+    <a id="t" class="btn btn-xs btn-primary">T</a>
+    <a id="u" class="btn btn-xs btn-primary">U</a>
+    <a id="v" class="btn btn-xs btn-primary">V</a>
+    <a id="w" class="btn btn-xs btn-primary">W</a>
+    <a id="x" class="btn btn-xs btn-primary">X</a>
+    <a id="y" class="btn btn-xs btn-primary">Y</a>
+    <a id="z" class="btn btn-xs btn-primary">Z</a></p>
+
+     <p>You have already guessed these letters:</p>
+      <span id="guessed"></span>
+      
+    </div>
+
+  </div>
+     
+    
+
     <script type="text/javascript">
 
-     $(document).ready(function(){
-
-      // Our array of possible computer choices.
-    var randomWordArray = ["bat", "ball", "base", "homerun", "steal", "dugout"];
-    var randomArray = randomWordArray[Math.floor(Math.random() * randomWordArray.length)];
-
-    var s;
-    var count = 0;
-    var answerArray = [];
-
-
-    $(document).on("keypress", function() {
-
-      // console.log(randomArray);
-      // console.log(randomArray.length);
-
-      for(var i = 0; i < randomArray.length; i++){
-        answerArray[i] = ("_");
-        // console.log(answerArray);
-      };
-        blankAnswer = answerArray.join(" ");
-       // console.log(blankAnswer);
-
-       var newDiv = $("#wordDiv");
-       var blankAnswerDiv = $("<div>" + blankAnswer + "</div>");
-       newDiv.html(blankAnswerDiv);
-
-     });
-
-  });
-
-        var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
      
-
-
-
-           
-       
-
-
-
-
-
-
-              
-      
-  
-  
-        // Variables for tracking our wins, losses guesses left and guesses made.
-     
-      
-      // When the user presses a key, it will run the following function...
-
-        
-     
-            
-          
-        
-                   
-
-          // Here we create the HTML that will be injected into our div and displayed on the page.
-          // var html = "<p><h1>Baseball</h1></p>" +
-          // "<p>Hangman</p>" +
-          // "<p>press any key to get started</p>" +
-          // "<p>Wins: " + wins + "</p>" +
-          // "<p>Current Word: " + currentword + "</p>" +
-          // "<p> Blank </p>" +
-          // "<p>Number of Guesses Remaining: " + left + "</p>" +
-          // "<p>Letters Already Used: " + guesses + "</p>";
-
-          // Injecting the HTML we just created into our div and updating the game information on our page.
-          // document.querySelector("#game").innerHTML = html;
-
    
       
     </script>
-
+    
+    <script type="text/javascript" src="assets/javascript/wordslist.js"></script>
+    <script type="text/javascript" src="assets/javascript/clickbutton.js"></script> 
+    <script type="text/javascript" src="assets/javascript/game.js"></script> 
   </body>
 </html>

@@ -49,5 +49,16 @@ Words.List[27] = "mdguire";
 Words.List[28] = "williams";
 Words.List[29] = "wrigley";
 
+Words.List[30] = "bartman";
+Words.List[31] = "balk";
+Words.List[32] = "backstop";
+Words.List[33] = "beanball";
+Words.List[34] = "blooper";
+Words.List[35] = "bullpen";
+Words.List[36] = "bunt";
+Words.List[37] = "infielder";
+Words.List[38] = "twinbill";
+Words.List[39] = "umpire";
+
 Words.Length = Words.List.lenght;
 
