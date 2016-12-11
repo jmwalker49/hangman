@@ -12,97 +12,69 @@
   </head>
   <body>
 
-    <!-- When we start playing the game, our HTML will be placed into this div. -->
-    <div id="game">
-      <p><h1>Baseball</h1></p>
-      <p>Hangman</p>
-      <p>Press any key to get started</p>
-      <p>Wins: </p>
-      <p>Current Word: </p>
-      <p id="wordDiv"> Blank </p>
-      <p>Number of Guesses Remaining: </p>
-      <p>Letters Already Used: </p>
+    <div id="container">
+      <div id="header">Theme Hangman Game</div>
+        <div>Select any key to begin</div>
+        <div id="word">REPLACE WITH WORD</div>
+        <div id="lives">REPLACE LIVES HERE</div>
+        <div>You have already guessed<span id="used"></span></div>
 
     </div>
-
-    <script type="text/javascript">
-
-     $(document).ready(function(){
-
-      // Our array of possible computer choices.
-    var randomWordArray = ["bat", "ball", "base", "homerun", "steal", "dugout"];
-    var pullWord = randomWordArray[Math.floor(Math.random() * randomWordArray.length)];
-
-    var s;
-    var count = 0;
-    var answerArray = [];
-
-
-    $(document).on("keypress", function() {
-
-      // console.log(randomArray);
-      // console.log(randomArray.length);
-
-      for(var i = 0; i < randomArray.length; i++){
-        answerArray[i] = ("_");
-        // console.log(answerArray);
-      };
-        blankAnswer = answerArray.join(" ");
-       // console.log(blankAnswer);
-
-       var newDiv = $("#wordDiv");
-       var blankAnswerDiv = $("<div>" + blankAnswer + "</div>");
-       newDiv.html(blankAnswerDiv);
-
-     });
-
-  });
-
-        var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-     
-
-
-
-           
-       
-
-
-
-
-
-
-              
-      
-  
-  
-        // Variables for tracking our wins, losses guesses left and guesses made.
-     
-      
-      // When the user presses a key, it will run the following function...
-
-        
-     
-            
-          
-        
-                   
-
-          // Here we create the HTML that will be injected into our div and displayed on the page.
-          // var html = "<p><h1>Baseball</h1></p>" +
-          // "<p>Hangman</p>" +
-          // "<p>press any key to get started</p>" +
-          // "<p>Wins: " + wins + "</p>" +
-          // "<p>Current Word: " + currentword + "</p>" +
-          // "<p> Blank </p>" +
-          // "<p>Number of Guesses Remaining: " + left + "</p>" +
-          // "<p>Letters Already Used: " + guesses + "</p>";
-
-          // Injecting the HTML we just created into our div and updating the game information on our page.
-          // document.querySelector("#game").innerHTML = html;
+    
 
    
       
+    <script>
+      var wordsList = ["javascript", "jquery", "html", "variable"];
+      var randomWord = wordsList[Math.floor(Math.random() * wordsList.length)];
+      var wordU = [];
+      var i;
+      var uWord = wordU.join(" ");
+      var lives = 5;
+      var guessed = [];
+      var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+
+
+$("document").ready(function(){
+
+  $("#lives").text(lives);
+
+  console.log(randomWord);
+
+  for(i=0; i < randomWord.length; i++) {
+    wordU[i] = "_";
+    console.log(wordU); 
+    var uWord = wordU.join(" ");
+    console.log(uWord);
+};
+
+  $("#word").text(uWord);
+
+ 
+
+  document.onkeyup = function(event){
+  var letter = String.fromCharCode(event.keyCode).toLowerCase();
+  console.log(letter);
+
+  for(i = 0; i < randomWord.lenth; i++){
+    if(randomWord[i] = {
+      alert("Hello");
+    };
+
+  }
+
+     
+    }
+
+
+  
+
+
+
+
+
+  });
     </script>
 
   </body>

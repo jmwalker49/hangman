@@ -1,52 +1,65 @@
 body {
-    background-color: lightblue;
+    background-color: #05ddf0;
 }
 
+#effect {
+	background: #ffffff;
+	border: 2px solid black;
+}
 
+#logo{
+	
+	overflow: auto;
+	margin: auto;
+}
+
+img {
+	display: block;
+	margin: auto;
+}
 
 #container {
-	width: 75%;
-	border-radius: 5px;
-	background-color: #dddddd;
-	/*background-image: url("../images/buttonbkgrd.jpg");*/
+	width: 960px;
+	height: 540px;
+	background-image: url("../images/AM.jpg");
 	padding: 18px;
-	margin: 5% auto;
+	margin: auto;
+
 	text-align: center;
-	border: 2px solid green;
+	overflow: auto;
 }
 
 #letters a{
-	color: red;
+	color: #f89c1c;
 	border-radius: 5px;
 	padding: 5px;
-	background-color: darkgray;
+	background-color: #ffffff;
 	cursor: pointer;
-	
+	font-weight: 700;
+	border-color: #f89c1c;
 }
 
 #header{
 	font-weight: bold;
-}
-
+	
 }
 #letters a:hover{
-	color: green;
+	color: black;
+	text-decoration-style: bold;
 }
 
-#letters a .d{
-	color: yellow;
-	text-decoration: underline;
-}
+
 
 .btn-xs {
 	width: 20px;
+	margin-top: 5px;
   }
 #m {
     
 }
 
 #lives {
- color: red;
+ color:  #f89c1c;
     font-size: 50px;
 }
 
@@ -66,7 +79,7 @@ body {
 
 #guessed {
     font-size: 25px;
-    color: red;
+    color: #f89c1c;
 }
 
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>The Pyschic Game</title>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    
 
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 
@@ -18,8 +18,24 @@
       <source src="assets/sounds/World.mp3" type="audio/mpeg">
      </audio>
 
+  <audio id="myAudio2">
+      <source src="assets/sounds/cannonball.mp3" type="audio/mpeg">
+     </audio>
+
+ <audio id="myAudio3">
+      <source src="assets/sounds/everytime.mp3" type="audio/mpeg">
+     </audio>
+
+  <div id="logo"><row class="col-lg-12" id="header"><img src="assets/images/header.jpg" align="middle"></row></div>
+  <row class="col-lg-1"></row>
+  <row class="col-lg-10">
   <div id="container">
 
+
+<!-- left panel -->
+
+  <row class="col-lg-5">
+  <div id="effect">
     <div id="header">
       <p>You have <span id="lives">4</span> lives left.
       <br>There are <span id="numLetters">0</span> letters in this word.
@@ -58,12 +74,15 @@
     <a id="z" class="btn btn-xs btn-primary">Z</a></p>
 
      <p>You have already guessed these letters:</p>
-      <span id="guessed"></span>
+       <span id="guessed"><br></span> 
       
     </div>
-
+    </div>
+</row>
+<row class="col-lg-5">  </row>
   </div>
-     
+   </row>  
+    <row class="col-lg-1"></row>
     
 
     <script type="text/javascript">

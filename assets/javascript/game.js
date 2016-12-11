@@ -15,7 +15,12 @@ Main.pullWord = function () {
 }
 
 // function start here
+     var x = document.getElementById("myAudio");
+       function playAudio() {
+        x.play();
 
+                }
+                playAudio();
 
 
 
@@ -76,7 +81,7 @@ Main.setUnderline = function(){
 			
                
 				
-               var x = document.getElementById("myAudio");
+               var x = document.getElementById("myAudio2");
                 function playAudio() {
                     x.play();
 
@@ -95,9 +100,22 @@ Main.setUnderline = function(){
 		
 
 		if(Main.Lives < 1){
+
+
+			 var y = document.getElementById("myAudio3");
+                function playAudio() {
+                    y.play();
+
+                }
+              
+
 			// document.getElementById("WORD").innerHTML = Main.Word1;
 			alert("You have run out of lives!  Please try agian.");
-			window.location.reload();
+			setTimeout(function(){
+    window.location.reload();
+},6000);
+			
+			playAudio();
 			}		
 	
 		};
